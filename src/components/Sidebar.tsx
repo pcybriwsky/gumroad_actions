@@ -35,72 +35,73 @@ const Sidebar = () => {
           <nav>
             <ul className="text-center">
               <li className='py-[10px]'>
-                <Link to="/" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Home
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/products" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Products
                 </Link>
               </li>
               <li className='py-[10px]'>
                 <Link to="/" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Actions
+                  <span className="ml-2 text-white font-bold bg-pink w-[25px] h-[25px] text-center mx-auto items-center rounded-full px-2">!</span>
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/collaborators" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Collaborators
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/checkout" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Checkout
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/emails" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Emails
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/workflows" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Workflows
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/sales" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Sales
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/analytics" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Analytics
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/payouts" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Payouts
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/discover" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Discover
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/library" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Library
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/help" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Help
                 </Link>
               </li>
               <li className='py-[10px]'>
-                <Link to="/settings" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
+                <Link to="/about" className="block p-2 text-white hover:text-pink" onClick={handleMenuClick}>
                   Settings
                 </Link>
               </li>
@@ -117,15 +118,15 @@ const Sidebar = () => {
           </Link>
         </div>
         <nav className="flex-1">
-          <ul className="divide-y-2 divide-solid divide-white my-auto text-center">
+          <ul className="divide-y-[1px] divide-solid divide-white my-auto text-center">
             <li className='py-[20px]'>
-              <Link to="/" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <ShopWindowIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Home</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/products" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <ArchiveFillIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Products</span>
               </Link>
@@ -135,42 +136,44 @@ const Sidebar = () => {
               <Link to="/" className="flex items-center p-2 text-white hover:text-pink">
                 <Check2SquareIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Actions</span>
+                <span className="ml-2 text-white font-bold bg-pink w-[25px] h-[25px] text-center mx-auto items-center rounded-full px-2">!</span>
+
               </Link>
             </li>
-            
+
             <li className='py-[20px]'>
-              <Link to="/collaborators" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <DealFillIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Collaborators</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/checkout" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <Cart3FillIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Checkout</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/emails" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <EnvelopeFillIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Emails</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/workflows" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <Diagram2FillIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Workflows</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/sales" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <CurrencyDollarIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Sales</span>
               </Link>
             </li>
 
             <li className='py-[20px]'>
-              <Link to="/analytics" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <BarChartFillIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Analytics</span>
               </Link>
@@ -178,28 +181,28 @@ const Sidebar = () => {
 
 
             <li className='py-[20px]'>
-              <Link to="/payouts" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <CurrencyDollarIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Payouts</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/discover" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <span className="ml-2">Discover</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/library" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <span className="ml-2">Library</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/help" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <span className="ml-2">Help</span>
               </Link>
             </li>
             <li className='py-[20px]'>
-              <Link to="/settings" className="flex items-center p-2 text-white hover:text-pink">
+              <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
                 <span className="ml-2">Settings</span>
               </Link>
             </li>

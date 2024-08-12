@@ -5,6 +5,7 @@ import Actions from './pages/Actions';
 import Email from './pages/Email';
 import Discount from './pages/Discount';
 import Workflow from './pages/Workflow';
+import About from './pages/About';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/email" element={<Email />} />
           <Route path="/discount" element={<Discount />} />
           <Route path="/workflow" element={<Workflow />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
       </div>
