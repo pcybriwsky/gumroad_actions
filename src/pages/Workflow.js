@@ -9,7 +9,7 @@ const Workflow = () => {
     const handleSaveWorkflow = () => {
         // Logic to save the workflow goes here
         alert('Workflow saved successfully!');
-        navigate('/win-back');  // Navigate back to the win-back page after saving
+        navigate('/');  // Navigate back to the win-back page after saving
     };
 
     return (

@@ -32,7 +32,7 @@ const Discount = () => {
         });
 
         // Redirect back to the Seasonal Promotions or any other component
-        navigate('/seasonal-promotions');
+        navigate('/');
     };
 
     return (

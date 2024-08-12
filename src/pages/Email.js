@@ -1,16 +1,15 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Email = () => {
     const location = useLocation();
     const { to, subject, body } = location.state || { to: '', subject: '', body: '' };
+    const navigate = useNavigate();
 
     const handleSendEmail = () => {
         // Here you would add the logic to send the email or pass the data to the email sending service
-        console.log("Sending email to:", to);
-        console.log("Subject:", subject);
-        console.log("Body:", body);
-        // Add your email sending logic here
+        alert('Email sent successfully!');
+        navigate('/');  // Navigate back to the win-back page after saving        
     };
 
     return (
