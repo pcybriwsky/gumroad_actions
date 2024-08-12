@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Gumroad Dashboard Actions Tab Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a demo for the Gumroad Design Engineer position, showcasing a proposed "Actions" tab on the Gumroad dashboard. The goal of this feature is to help users quickly gain insights from their data and take actions that can lead to increased sales. By highlighting opportunities based on user data, this feature enables sellers to make better use of existing capabilities such as checkout discounts, workflow automation, and email campaigns with just one click.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+1. **Purpose**: This demo addresses the challenge users face in understanding and acting upon their analytics. The "Actions" tab is designed to provide quick insights and actionable steps to help users optimize their sales strategies on Gumroad.
 
-### `npm start`
+2. **Actions Tab**: The "Actions" tab helps users identify opportunities in their data and offers one-click solutions, such as creating discounts, setting up email campaigns, and automating workflows. This allows users to act quickly and effectively, improving their chances of making sales.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Site Structure**: This demo recreates the Gumroad site to showcase the "Actions" tab and a few supporting click-through pages. All other pages are either dead links or redirect to an "About" page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Data Source**: The data used to inform these pages is structured in the same format as the Gumroad Sales Export CSV. This allows the feature to analyze real sales data and provide relevant suggestions to the user.
 
-### `npm test`
+5. **Scalability**: As users engage with the feature and provide feedback, Gumroad can expand the use cases of the "Actions" tab. This could include analyzing different types of data, identifying more scenarios for user actions, and enabling A/B testing based on past performance. Additional support from a data scientist could be leveraged as the feature matures.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: The project is built using React, a JavaScript library for building user interfaces.
+- **Tailwind CSS**: Styling is handled using Tailwind CSS, a utility-first CSS framework that allows for rapid UI development.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This demo showcases a proposed enhancement to the Gumroad dashboard. It focuses on improving user experience by providing actionable insights directly within the dashboard. The "Actions" tab and related features are built with scalability in mind, allowing for future enhancements based on user feedback and data analysis.
