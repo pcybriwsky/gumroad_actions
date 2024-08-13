@@ -54,7 +54,7 @@ const About = () => {
                         <h2 className='text-4xl my-2'>About Me</h2>
                         <p className='mb-4'>I'm Pete, a designer and software engineer out of New York.</p>
                         <p className='mb-4'>I spent some time doing product marketing and design consulting before starting <a href="https://ngenart.com" target="_blank" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">n-gen</a>, a solo design studio turning data into 1:1 art and visualizations. The application connects to APIs from Strava and Spotify and allows users to sign-in and create art directly from their data. To-date, the application has had over 9M users.</p>
-                        <p className='mb-4'>Over the past few months, I've begun to work with companies on small projects as well to build experiences natively into their platforms. n-gen and associated projects have been built on React, Node.js, and Tailwind. I've served as both designer and engineer.</p>
+                        <p className='mb-4'>As part of n-gen, I've begun to work with companies on small projects as well to build experiences natively into their platforms. The n-gen site and associated projects have been built on React, Node.js, and Tailwind. I've served as both designer and fromt-end engineer.</p>
 
                         <p className='mb-4'>I'm passionate about the opportunity to work as a Design Engineer at Gumroad. It's a chance to leverage my design and technical chops to create a better experience for solo creators and entrepreneurs, something I've experienced first-hand to be extremely difficult.</p>
 
