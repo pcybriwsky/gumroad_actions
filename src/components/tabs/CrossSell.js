@@ -70,8 +70,8 @@ const CrossSell = () => {
                     totalPaired,
                     onlyCourseA,
                     onlyCourseB,
-                    suggestionA: `Email ${onlyCourseA} Customers with a Promotion`,
-                    suggestionB: `Email ${onlyCourseB} Customers with a Promotion`,
+                    suggestionA: `Cross-Promote ${courseB} to ${courseA} customers`,
+                    suggestionB: `Cross-Promote ${courseA} to ${courseB} customers`,
                 };
             });
 
@@ -160,8 +160,8 @@ const CrossSell = () => {
 
                     return (
                         <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black">
-                            <div className="flex justify-between items-center">
-                                <p className='text-sm font-bold'>Products</p>
+                            <div className="flex justify-between items-center mb-4">
+                                <h2 className="text-2xl font-semibold">{pair.courseA} <span className='italic'>and</span> {pair.courseB}</h2>
                                 <button
                                     onClick={() => dismissSuggestion(index)}
                                     className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
@@ -169,13 +169,11 @@ const CrossSell = () => {
                                     &#10005;
                                 </button>
                             </div>
-                            <h2 className="text-xl font-semibold mb-4">Cross-Sell Opportunities for {pair.courseA} & {pair.courseB}</h2>
 
                             {/* Bar Chart */}
                             <div className="flex justify-center">
                                 <CustomBarChart data={barChartData} courseA={pair.courseA} courseB={pair.courseB} />
                             </div>
-                            <h2 className="text-xl font-semibold my-2">Take Action!</h2>
                             <div className="flex flex-col gap-4 lg:flex-row justify-around">
                                 <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
                                     <button onClick={() => handleNavigateToEmail(pair.courseA, pair.courseB, pair.onlyCourseA)} className="relative h-full w-full bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">

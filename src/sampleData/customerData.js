@@ -67,7 +67,7 @@ const supporterData = [
             },
             {
                 purchaseId: "J8kL9M",
-                itemName: "How to make money as a digital artist",
+                itemName: "How to Make Money as a Digital Artist",
                 buyerName: "John Doe",
                 purchaseEmail: "johndoe@gmail.com",
                 buyerEmail: "johndoe@gmail.com",
@@ -135,7 +135,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "A1bC2D",
-                itemName: "Data and art",
+                itemName: "Data and Art",
                 buyerName: "Jane Smith",
                 purchaseEmail: "janesmith@gmail.com",
                 buyerEmail: "janesmith@gmail.com",
@@ -203,7 +203,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "C3dE4F",
-                itemName: "Marketing your art business",
+                itemName: "Marketing Your Art Business",
                 buyerName: "Alice Johnson",
                 purchaseEmail: "alicejohnson@gmail.com",
                 buyerEmail: "alicejohnson@gmail.com",
@@ -332,7 +332,7 @@ const supporterData = [
             },
             {
                 purchaseId: "K7lM8N",
-                itemName: "Data and art",
+                itemName: "Data and Art",
                 buyerName: "Bob Wilson",
                 purchaseEmail: "bobwilson@gmail.com",
                 buyerEmail: "bobwilson@gmail.com",
@@ -400,7 +400,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "O9pQ1R",
-                itemName: "How to make money as a digital artist",
+                itemName: "How to Make Money as a Digital Artist",
                 buyerName: "Chris Evans",
                 purchaseEmail: "chrisevans@gmail.com",
                 buyerEmail: "chrisevans@gmail.com",
@@ -461,7 +461,7 @@ const supporterData = [
             },
             {
                 purchaseId: "S2tU3V",
-                itemName: "Marketing your art business",
+                itemName: "Marketing Your Art Business",
                 buyerName: "Chris Evans",
                 purchaseEmail: "chrisevans@gmail.com",
                 buyerEmail: "chrisevans@gmail.com",
@@ -590,7 +590,7 @@ const supporterData = [
             },
             {
                 purchaseId: "Z6aB7C",
-                itemName: "How to make money as a digital artist",
+                itemName: "How to Make Money as a Digital Artist",
                 buyerName: "Sarah White",
                 purchaseEmail: "sarahwhite@gmail.com",
                 buyerEmail: "sarahwhite@gmail.com",
@@ -658,7 +658,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "D8eF9G",
-                itemName: "Marketing your art business",
+                itemName: "Marketing Your Art Business",
                 buyerName: "David Brown",
                 purchaseEmail: "davidbrown@gmail.com",
                 buyerEmail: "davidbrown@gmail.com",
@@ -787,7 +787,7 @@ const supporterData = [
             },
             {
                 purchaseId: "L3mN4O",
-                itemName: "How to make money as a digital artist",
+                itemName: "How to Make Money as a Digital Artist",
                 buyerName: "Emily Clark",
                 purchaseEmail: "emilyclark@gmail.com",
                 buyerEmail: "emilyclark@gmail.com",
@@ -855,7 +855,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "N5oP6Q",
-                itemName: "Data and art",
+                itemName: "Data and Art",
                 buyerName: "Michael Green",
                 purchaseEmail: "michaelgreen@gmail.com",
                 buyerEmail: "michaelgreen@gmail.com",
@@ -923,7 +923,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "T7uV8W",
-                itemName: "Marketing your art business",
+                itemName: "Marketing Your Art Business",
                 buyerName: "Jessica Miller",
                 purchaseEmail: "jessicamiller@gmail.com",
                 buyerEmail: "jessicamiller@gmail.com",
@@ -1052,7 +1052,7 @@ const supporterData = [
             },
             {
                 purchaseId: "B2cD3E",
-                itemName: "How to make money as a digital artist",
+                itemName: "How to Make Money as a Digital Artist",
                 buyerName: "Daniel Thomas",
                 purchaseEmail: "danielthomas@gmail.com",
                 buyerEmail: "danielthomas@gmail.com",
@@ -1120,7 +1120,7 @@ const supporterData = [
         history: [
             {
                 purchaseId: "F4gH5I",
-                itemName: "Marketing your art business",
+                itemName: "Marketing Your Art Business",
                 buyerName: "Olivia Harris",
                 purchaseEmail: "oliviaharris@gmail.com",
                 buyerEmail: "oliviaharris@gmail.com",
@@ -1181,7 +1181,7 @@ const supporterData = [
             },
             {
                 purchaseId: "J6kL7M",
-                itemName: "Data and art",
+                itemName: "Data and Art",
                 buyerName: "Olivia Harris",
                 purchaseEmail: "oliviaharris@gmail.com",
                 buyerEmail: "oliviaharris@gmail.com",
@@ -1249,7 +1249,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "RP3huc",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Laura Smith",
             "purchaseEmail": "laurasmith@gmail.com",
             "buyerEmail": "laurasmith@gmail.com",
@@ -1568,7 +1568,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "S3JepA",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Laura Brown",
             "purchaseEmail": "laurabrown@gmail.com",
             "buyerEmail": "laurabrown@gmail.com",
@@ -2077,7 +2077,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "IAMS2h",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Laura Rodriguez",
             "purchaseEmail": "laurarodriguez@gmail.com",
             "buyerEmail": "laurarodriguez@gmail.com",
@@ -2138,7 +2138,7 @@ const supporterData = [
           },
           {
             "purchaseId": "bz1hqm",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Laura Rodriguez",
             "purchaseEmail": "laurarodriguez@gmail.com",
             "buyerEmail": "laurarodriguez@gmail.com",
@@ -2260,7 +2260,7 @@ const supporterData = [
           },
           {
             "purchaseId": "GaMHQt",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Laura Rodriguez",
             "purchaseEmail": "laurarodriguez@gmail.com",
             "buyerEmail": "laurarodriguez@gmail.com",
@@ -2518,7 +2518,7 @@ const supporterData = [
           },
           {
             "purchaseId": "aSpCXS",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Robert Miller",
             "purchaseEmail": "robertmiller@gmail.com",
             "buyerEmail": "robertmiller@gmail.com",
@@ -2640,7 +2640,7 @@ const supporterData = [
           },
           {
             "purchaseId": "JWYOh3",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Robert Miller",
             "purchaseEmail": "robertmiller@gmail.com",
             "buyerEmail": "robertmiller@gmail.com",
@@ -2708,7 +2708,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "OUl8jc",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Laura Garcia",
             "purchaseEmail": "lauragarcia@gmail.com",
             "buyerEmail": "lauragarcia@gmail.com",
@@ -2898,7 +2898,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "IWCG13",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Jessica Brown",
             "purchaseEmail": "jessicabrown@gmail.com",
             "buyerEmail": "jessicabrown@gmail.com",
@@ -3020,7 +3020,7 @@ const supporterData = [
           },
           {
             "purchaseId": "zabKoI",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Jessica Brown",
             "purchaseEmail": "jessicabrown@gmail.com",
             "buyerEmail": "jessicabrown@gmail.com",
@@ -3149,7 +3149,7 @@ const supporterData = [
           },
           {
             "purchaseId": "2ZQCdA",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Emily Johnson",
             "purchaseEmail": "emilyjohnson@gmail.com",
             "buyerEmail": "emilyjohnson@gmail.com",
@@ -3210,7 +3210,7 @@ const supporterData = [
           },
           {
             "purchaseId": "sfKXyv",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Emily Johnson",
             "purchaseEmail": "emilyjohnson@gmail.com",
             "buyerEmail": "emilyjohnson@gmail.com",
@@ -3658,7 +3658,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "PW0snB",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "David Johnson",
             "purchaseEmail": "davidjohnson@gmail.com",
             "buyerEmail": "davidjohnson@gmail.com",
@@ -3841,7 +3841,7 @@ const supporterData = [
           },
           {
             "purchaseId": "rui4Tb",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "David Johnson",
             "purchaseEmail": "davidjohnson@gmail.com",
             "buyerEmail": "davidjohnson@gmail.com",
@@ -3970,7 +3970,7 @@ const supporterData = [
           },
           {
             "purchaseId": "KW8Tjj",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Laura Rodriguez",
             "purchaseEmail": "laurarodriguez@gmail.com",
             "buyerEmail": "laurarodriguez@gmail.com",
@@ -4038,7 +4038,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "1gwITO",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Sarah Jones",
             "purchaseEmail": "sarahjones@gmail.com",
             "buyerEmail": "sarahjones@gmail.com",
@@ -4106,7 +4106,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "Caqhme",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "David Miller",
             "purchaseEmail": "davidmiller@gmail.com",
             "buyerEmail": "davidmiller@gmail.com",
@@ -4174,7 +4174,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "ExWDsf",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Michael Williams",
             "purchaseEmail": "michaelwilliams@gmail.com",
             "buyerEmail": "michaelwilliams@gmail.com",
@@ -4242,7 +4242,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "9fQ8bs",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Robert Smith",
             "purchaseEmail": "robertsmith@gmail.com",
             "buyerEmail": "robertsmith@gmail.com",
@@ -4364,7 +4364,7 @@ const supporterData = [
           },
           {
             "purchaseId": "3oGx8N",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Robert Smith",
             "purchaseEmail": "robertsmith@gmail.com",
             "buyerEmail": "robertsmith@gmail.com",
@@ -4493,7 +4493,7 @@ const supporterData = [
           },
           {
             "purchaseId": "zK7bhu",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Daniel Williams",
             "purchaseEmail": "danielwilliams@gmail.com",
             "buyerEmail": "danielwilliams@gmail.com",
@@ -4554,7 +4554,7 @@ const supporterData = [
           },
           {
             "purchaseId": "Vrt3A8",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Daniel Williams",
             "purchaseEmail": "danielwilliams@gmail.com",
             "buyerEmail": "danielwilliams@gmail.com",
@@ -4676,7 +4676,7 @@ const supporterData = [
           },
           {
             "purchaseId": "wpNUVm",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Daniel Williams",
             "purchaseEmail": "danielwilliams@gmail.com",
             "buyerEmail": "danielwilliams@gmail.com",
@@ -4805,7 +4805,7 @@ const supporterData = [
           },
           {
             "purchaseId": "KAUtd3",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Jane Miller",
             "purchaseEmail": "janemiller@gmail.com",
             "buyerEmail": "janemiller@gmail.com",
@@ -4866,7 +4866,7 @@ const supporterData = [
           },
           {
             "purchaseId": "p7Ea7O",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Jane Miller",
             "purchaseEmail": "janemiller@gmail.com",
             "buyerEmail": "janemiller@gmail.com",
@@ -5117,7 +5117,7 @@ const supporterData = [
           },
           {
             "purchaseId": "fbBK0K",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "John White",
             "purchaseEmail": "johnwhite@gmail.com",
             "buyerEmail": "johnwhite@gmail.com",
@@ -5239,7 +5239,7 @@ const supporterData = [
           },
           {
             "purchaseId": "Gznht8",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "John White",
             "purchaseEmail": "johnwhite@gmail.com",
             "buyerEmail": "johnwhite@gmail.com",
@@ -5307,7 +5307,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "OXUssT",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Emily Miller",
             "purchaseEmail": "emilymiller@gmail.com",
             "buyerEmail": "emilymiller@gmail.com",
@@ -5429,7 +5429,7 @@ const supporterData = [
           },
           {
             "purchaseId": "QsdVHo",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Emily Miller",
             "purchaseEmail": "emilymiller@gmail.com",
             "buyerEmail": "emilymiller@gmail.com",
@@ -5931,7 +5931,7 @@ const supporterData = [
           },
           {
             "purchaseId": "Ff3NFS",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Michael Johnson",
             "purchaseEmail": "michaeljohnson@gmail.com",
             "buyerEmail": "michaeljohnson@gmail.com",
@@ -5999,7 +5999,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "DPbNOU",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Emily Smith",
             "purchaseEmail": "emilysmith@gmail.com",
             "buyerEmail": "emilysmith@gmail.com",
@@ -6372,7 +6372,7 @@ const supporterData = [
           },
           {
             "purchaseId": "AvniQs",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Daniel Williams",
             "purchaseEmail": "danielwilliams@gmail.com",
             "buyerEmail": "danielwilliams@gmail.com",
@@ -6433,7 +6433,7 @@ const supporterData = [
           },
           {
             "purchaseId": "0nUXwK",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Daniel Williams",
             "purchaseEmail": "danielwilliams@gmail.com",
             "buyerEmail": "danielwilliams@gmail.com",
@@ -6691,7 +6691,7 @@ const supporterData = [
           },
           {
             "purchaseId": "hAyUY7",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Daniel Brown",
             "purchaseEmail": "danielbrown@gmail.com",
             "buyerEmail": "danielbrown@gmail.com",
@@ -6827,7 +6827,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "EBReSi",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Robert Miller",
             "purchaseEmail": "robertmiller@gmail.com",
             "buyerEmail": "robertmiller@gmail.com",
@@ -7078,7 +7078,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "gfMiuL",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Jessica Rodriguez",
             "purchaseEmail": "jessicarodriguez@gmail.com",
             "buyerEmail": "jessicarodriguez@gmail.com",
@@ -7207,7 +7207,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "YgJPt8",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Sarah Williams",
             "purchaseEmail": "sarahwilliams@gmail.com",
             "buyerEmail": "sarahwilliams@gmail.com",
@@ -7268,7 +7268,7 @@ const supporterData = [
           },
           {
             "purchaseId": "W09qIp",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Sarah Williams",
             "purchaseEmail": "sarahwilliams@gmail.com",
             "buyerEmail": "sarahwilliams@gmail.com",
@@ -7329,7 +7329,7 @@ const supporterData = [
           },
           {
             "purchaseId": "KDHJUo",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Sarah Williams",
             "purchaseEmail": "sarahwilliams@gmail.com",
             "buyerEmail": "sarahwilliams@gmail.com",
@@ -7458,7 +7458,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "CnRme6",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Laura Miller",
             "purchaseEmail": "lauramiller@gmail.com",
             "buyerEmail": "lauramiller@gmail.com",
@@ -7648,7 +7648,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "p2hvy0",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "John Johnson",
             "purchaseEmail": "johnjohnson@gmail.com",
             "buyerEmail": "johnjohnson@gmail.com",
@@ -7777,7 +7777,7 @@ const supporterData = [
           },
           {
             "purchaseId": "00B7Uz",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Robert Miller",
             "purchaseEmail": "robertmiller@gmail.com",
             "buyerEmail": "robertmiller@gmail.com",
@@ -8347,7 +8347,7 @@ const supporterData = [
           },
           {
             "purchaseId": "yqeEGY",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "John Brown",
             "purchaseEmail": "johnbrown@gmail.com",
             "buyerEmail": "johnbrown@gmail.com",
@@ -9039,7 +9039,7 @@ const supporterData = [
           },
           {
             "purchaseId": "aQxv7l",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Robert Garcia",
             "purchaseEmail": "robertgarcia@gmail.com",
             "buyerEmail": "robertgarcia@gmail.com",
@@ -9297,7 +9297,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "kEWBTK",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Michael Davis",
             "purchaseEmail": "michaeldavis@gmail.com",
             "buyerEmail": "michaeldavis@gmail.com",
@@ -9365,7 +9365,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "GeGorO",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Sarah Williams",
             "purchaseEmail": "sarahwilliams@gmail.com",
             "buyerEmail": "sarahwilliams@gmail.com",
@@ -9738,7 +9738,7 @@ const supporterData = [
           },
           {
             "purchaseId": "8BzNJ2",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "David Jones",
             "purchaseEmail": "davidjones@gmail.com",
             "buyerEmail": "davidjones@gmail.com",
@@ -10057,7 +10057,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "b9HHg2",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Michael Smith",
             "purchaseEmail": "michaelsmith@gmail.com",
             "buyerEmail": "michaelsmith@gmail.com",
@@ -10118,7 +10118,7 @@ const supporterData = [
           },
           {
             "purchaseId": "flG3cb",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Michael Smith",
             "purchaseEmail": "michaelsmith@gmail.com",
             "buyerEmail": "michaelsmith@gmail.com",
@@ -10376,7 +10376,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "WBM6qM",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Daniel Garcia",
             "purchaseEmail": "danielgarcia@gmail.com",
             "buyerEmail": "danielgarcia@gmail.com",
@@ -10885,7 +10885,7 @@ const supporterData = [
           },
           {
             "purchaseId": "qZjEJt",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Jane Davis",
             "purchaseEmail": "janedavis@gmail.com",
             "buyerEmail": "janedavis@gmail.com",
@@ -10946,7 +10946,7 @@ const supporterData = [
           },
           {
             "purchaseId": "krdbfS",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Jane Davis",
             "purchaseEmail": "janedavis@gmail.com",
             "buyerEmail": "janedavis@gmail.com",
@@ -11075,7 +11075,7 @@ const supporterData = [
         "history": [
           {
             "purchaseId": "CADULY",
-            "itemName": "Marketing your art business",
+            "itemName": "Marketing Your Art Business",
             "buyerName": "Jessica Jones",
             "purchaseEmail": "jessicajones@gmail.com",
             "buyerEmail": "jessicajones@gmail.com",
@@ -11197,7 +11197,7 @@ const supporterData = [
           },
           {
             "purchaseId": "wXMffe",
-            "itemName": "How to make money as a digital artist",
+            "itemName": "How to Make Money as a Digital Artist",
             "buyerName": "Jessica Jones",
             "purchaseEmail": "jessicajones@gmail.com",
             "buyerEmail": "jessicajones@gmail.com",

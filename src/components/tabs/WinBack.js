@@ -6,6 +6,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const WinBack = () => {
     const [inactiveCustomers, setInactiveCustomers] = useState([]);
     const [purchaseData, setPurchaseData] = useState([]);
+    const totalCustomers = superfansData.length; // Calculate the total number of customers
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -20,10 +21,10 @@ const WinBack = () => {
             if (!canBeContacted) return false;
 
             const lastPurchaseDate = new Date(user.history[user.history.length - 1].purchaseDate);
-            const sixMonthsAgo = new Date();
-            sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+            const threeMonthsAgo = new Date();
+            threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
 
-            return lastPurchaseDate < sixMonthsAgo;
+            return lastPurchaseDate < threeMonthsAgo;
         });
 
         setInactiveCustomers(inactiveList);
@@ -39,25 +40,32 @@ const WinBack = () => {
                 recentCustomers: 0,
             };
         }).reverse();
-
+    
+        let totalContactableCustomers = 0;
+    
         data.forEach((user) => {
             let hasRecentPurchase = false;
             let lastPurchaseDate = null;
-
+    
+            const canBeContacted = user.history.every((purchase) => purchase.doNotContact === 0);
+            if (canBeContacted) {
+                totalContactableCustomers += 1;
+            }
+    
             user.history.forEach((purchase) => {
                 const purchaseDate = new Date(purchase.purchaseDate);
-
+    
                 // Check if the purchase was made within the last 3 months
                 if (purchaseDate >= new Date().setMonth(new Date().getMonth() - 3)) {
                     hasRecentPurchase = true;
                 }
-
+    
                 // Update last purchase date
                 if (!lastPurchaseDate || purchaseDate > lastPurchaseDate) {
                     lastPurchaseDate = purchaseDate;
                 }
             });
-
+    
             // If the last purchase was within the last 12 months, update the data
             if (lastPurchaseDate && lastPurchaseDate >= new Date().setMonth(new Date().getMonth() - 12)) {
                 for (let i = 0; i < 12; i++) {
@@ -65,7 +73,7 @@ const WinBack = () => {
                     startDate.setMonth(startDate.getMonth() - (11 - i));
                     startDate.setDate(1);
                     startDate.setHours(0, 0, 0, 0);
-
+    
                     if (lastPurchaseDate >= startDate) {
                         monthlyData[i].customers += 1;
                         if (!hasRecentPurchase) {
@@ -75,11 +83,15 @@ const WinBack = () => {
                 }
             }
         });
-
+    
+        // Adding the total contactable customers as a constant value to each month
+        monthlyData.forEach((month) => {
+            month.totalContactable = totalContactableCustomers;
+        });
+    
         setPurchaseData(monthlyData);
     };
-
-
+    
 
     const handleNavigateToEmail = () => {
         navigate('/email', {
@@ -118,30 +130,27 @@ const WinBack = () => {
             <h1 className="text-3xl font-bold mb-6">Win-Back Campaign</h1>
             <p className="mb-6">We’ve taken a look at your customers' activity trends in the past year. Offer inactive customers a time-sensitive discount or inform them about new courses.</p>
 
-
-
             {inactiveCustomers.length > 0 ? (
                 <div className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black">
                     {purchaseData.length > 0 && (
                         <div className="mb-8">
-                            <h2 className="text-2xl font-semibold mb-4">Customer Purchase Activity Over the Last Year</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Customer Retention Over the Last Year</h2>
                             <div className="line-chart-container mx-auto">
-                            <ResponsiveContainer width="100%" height={300}>
-                                <LineChart data={purchaseData}>
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <XAxis dataKey="month" />
-                                    <YAxis />
-                                    <Tooltip />
-                                    <Legend />
-                                    <Line type="monotone" dataKey="customers" name='Cumlative Customer to Purchase Since' stroke="#FE91E8" activeDot={{ r: 8 }} />
-                                    {/* <Line type="monotone" dataKey="recentCustomers" stroke="#82ca9d" /> */}
-                                </LineChart>
-                            </ResponsiveContainer>
+                                <ResponsiveContainer width="100%" height={300}>
+                                    <LineChart data={purchaseData}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey="month" />
+                                        <YAxis domain={[0, totalCustomers]} /> {/* Set the domain to include the total number of customers */}
+                                        <Tooltip />
+                                        <Legend />
+                                        <Line type="monotone" dataKey="customers" name='Customers Retained Since' stroke="#FE91E8" activeDot={{ r: 8 }} />
+                                    </LineChart>
+                                </ResponsiveContainer>
                             </div>
                         </div>
                     )}
                     <p className="mb-2">
-                        <span className="font-semibold">{inactiveCustomers.length} of your customers</span> haven't made a purchase in the last 6 months and are contactable.
+                        <span className="font-semibold">{inactiveCustomers.length} of your past customers</span> haven't made a purchase in the last 3-months and are contactable.
                     </p>
 
                     <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
@@ -167,7 +176,7 @@ const WinBack = () => {
                             onClick={handleNavigateToWorkflow}
                             className="w-full relative border-solid border-black border-[1px] bg-gold text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
                         >
-                            Add 6-month "Win-Back Customers" to Workflow
+                            Add 3-month "Win-Back Customers" to Workflow
                         </button>
                     </div>
                 </div>

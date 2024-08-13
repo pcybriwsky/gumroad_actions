@@ -18,13 +18,22 @@ const About = () => {
                                 <strong>Purpose:</strong> This demo addresses the challenge users face in understanding and acting upon their analytics. The "Actions" tab is designed to provide quick insights and actionable steps to help users optimize their sales strategies on Gumroad.
                             </li>
                             <li className='mt-2'>
+                                <strong>Features:</strong> The demo highlights a feature to help Gumroad sellers identify and execute Cross-Sell, Seasonal, and Win-Back promotions to better engage with their customers, leading to increased sales.
+                                <ul className='list-disc ml-6'>
+                                    <li className='mt-2'><strong>Cross-Sell:</strong> Identify products frequently purchased together and target users who have only purchased one of the products.</li>
+                                    <li className='mt-2'><strong>Seasonal Promotions:</strong> Recommend product promotions based on past sales and trends data.</li>
+                                    <li className='mt-2'><strong>Win-Back Campaigns:</strong> Identify inactive customers and recommend actions to re-engage them with targeted promotions or information about a new product for sale.</li>
+                                </ul>
+                                The feature set will leverage existing Gumroad features like emails, workflows, amd discounts.
+                            </li>
+                            <li className='mt-2'>
                                 <strong>Site Structure:</strong> This demo recreates the Gumroad site to showcase the "Actions" tab and a few supporting click-through pages. All other pages are either dead links or redirect to this About page.
                             </li>
                             <li className='mt-2'>
-                                <strong>Data Source:</strong> The data used in the demo was randomly generated and is structured in the same format as the Gumroad Sales Export CSV. That said, a feature like this can be launched with Gumroad's existing data.
+                                <strong>Data Source:</strong> The data used in the demo was randomly generated and is structured in the same format as the Gumroad Sales Export CSV. That said, a feature like this can be launched with Gumroad's existing data collection.
                             </li>
                             <li className='mt-2'>
-                                <strong>Future Features:</strong> As users engage with the feature and provide feedback, Gumroad can expand the use cases of the "Actions" tab. This could include analyzing different and newly collected types of data, identifying more scenarios for user actions, and enabling A/B testing based on past performance. Additional support from a data scientist could be leveraged to build out the recommendation feature set.
+                                <strong>Future Features:</strong> As users engage with the feature and provide feedback, Gumroad can expand the use cases of the "Actions" tab. This could include analyzing different and newly collected types of data, identifying more scenarios for user actions, and enabling A/B testing based on past performance. Additional support from a data scientist could be leveraged to build out more robust recommendations and projections in the future as well.
                             </li>
                             <li className='mt-2'>
                                 <strong>Technologies Used in this Demo:</strong> React, Tailwind CSS, and deployed on Vercel.

@@ -42,7 +42,7 @@ const SeasonalPromotions = () => {
                 return {
                     itemName: item,
                     purchaseCount: purchaseCounts[item],
-                    suggestion: `Launch a Seasonal Promotion for ${item} in ${currentMonth}!`,
+                    suggestion: `Launch a Seasonal Promotion for ${item} during ${currentMonth}!`,
                 };
             });
 
@@ -147,8 +147,8 @@ const SeasonalPromotions = () => {
 
                     return (
                         <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black relative">
-                            <div className="flex justify-between items-center">
-                                <p className='text-sm font-bold'>Product</p>
+                            <div className="flex justify-between items-center mb-4">
+                                <h2 className="text-2xl font-semibold">Promotion Opportunity for {bundle.itemName}</h2>
                                 <button
                                     onClick={() => dismissBundle(index)}
                                     className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
@@ -156,7 +156,6 @@ const SeasonalPromotions = () => {
                                     &#10005;
                                 </button>
                             </div>
-                            <h2 className="text-2xl font-semibold mb-4">Promotion Opportunity for {bundle.itemName}</h2>
 
                             {/* Bar Chart */}
                             <ResponsiveContainer width="100%" height={300}>
@@ -170,7 +169,7 @@ const SeasonalPromotions = () => {
                             </ResponsiveContainer>
 
                             <p className="mb-2">
-                                <span className="font-semibold">{bundle.purchaseCount} customers</span> purchased this product in {currentMonth}. It might be worth running a promotion for this product at this time or other hot times of the year!
+                                <span className="font-semibold">{bundle.purchaseCount} customers</span> purchased this product during the month of {currentMonth}. It might be worth running a promotion for this product at this time or other hot times of the year!
                             </p>
                             <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
                                 <button

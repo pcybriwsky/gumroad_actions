@@ -35,14 +35,14 @@ const Actions = () => {
                     className={`px-4 rounded-full py-2 mr-2 hover:border-[1px] hover:border-black ${activeTab === 'SeasonalPromotions' ? 'bg-white border-black border-[1px]' : ''}`}
                     onClick={() => setActiveTab('SeasonalPromotions')}
                 >
-                    Seasonal Promotions
+                    Promote
                 </button>
 
                 <button
                     className={`px-4 rounded-full py-2 mr-2 hover:border-[1px] hover:border-black ${activeTab === 'WinBack' ? 'bg-white border-black border-[1px]' : ''}`}
                     onClick={() => setActiveTab('WinBack')}
                 >
-                    Win-Back Customers
+                    Win-Back
                 </button>
             </div>
             <div className="tab-content">
