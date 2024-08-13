@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import superfansData from '../../sampleData/customerData'
-import VennDiagram from '../diagrams/VennDiagram';  // import the VennDiagram component
+import CustomBarChart from '../diagrams/BarChart';
+
+
 
 
 const CrossSell = () => {
@@ -68,8 +70,8 @@ const CrossSell = () => {
                     totalPaired,
                     onlyCourseA,
                     onlyCourseB,
-                    suggestionA: `Email ${onlyCourseA} users with a promotion.`,
-                    suggestionB: `Email ${onlyCourseB} users with a promotion.`,
+                    suggestionA: `Email ${onlyCourseA} Customers with a Promotion`,
+                    suggestionB: `Email ${onlyCourseB} Customers with a Promotion`,
                 };
             });
 
@@ -87,7 +89,7 @@ const CrossSell = () => {
     const handleNavigateToEmail = (courseA, courseB, totalPairs) => {
         navigate('/email', {
             state: {
-                to: `${totalPairs} users`,
+                to: `${totalPairs} customers`,
                 subject: `Take advantage of this exclusive offer on ${courseA}`,
                 body: `Dear Customer,\n\nWe noticed that you have purchased ${courseB}. We are excited to offer you a special promotion on ${courseA}. Use the discount code OFFER2024 to get a 20% discount!\n\nBest regards,\nYour Company`,
             },
@@ -113,19 +115,19 @@ const CrossSell = () => {
 
     return (
         <div className="actions-container">
-            <div className="flex justify-between items-center mb-6">
-                <div className="flex items-center">
-                    <h1 className="text-3xl font-bold mr-4">Cross-Sell Opportunities</h1>
+            <div className="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-4 lg:space-y-0 lg:space-x-4">
+                <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0">
+                    <h1 className="text-3xl font-bold mb-2 lg:mb-0 lg:mr-4 text-center lg:text-left">Cross-Sell Opportunities</h1>
                     <div className="bg-pink text-black px-3 py-1 text-center rounded-full border-solid border-[1px] border-black">
-                        {visiblePairs.length} actions available
+                        {visiblePairs.length} Actions Available
                     </div>
                 </div>
                 {visiblePairs.length > 0 && (
-                    <div className="flex space-x-4">
+                    <div className="flex flex-col lg:flex-row justify-center lg:justify-start space-y-4 lg:space-y-0 lg:space-x-4">
                         <div className="bg-black text-white text-center rounded">
                             <button
                                 onClick={() => setShowApplyDialog(true)}
-                                className="relative border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                className="relative w-full border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
                             >
                                 Apply All
                             </button>
@@ -133,7 +135,7 @@ const CrossSell = () => {
                         <div className="bg-black text-white text-center rounded">
                             <button
                                 onClick={() => setShowDismissDialog(true)}
-                                className="relative border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                className="relative w-full border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
                             >
                                 Dismiss All
                             </button>
@@ -141,15 +143,19 @@ const CrossSell = () => {
                     </div>
                 )}
             </div>
+
             <p className="mb-6">We’ve identified products frequently purchased together by customers and highlighted opportunities to cross-sell to those who have bought one but not the other.</p>
-            <p className="mb-6 italic">Note: We are only highlighting users who are contactable and who have not been sent a promotion email in the last 7-days</p>
+            <p className="mb-6 italic">Note: We are only highlighting customers who are contactable and who have not been sent a promotion email in the last 7-days</p>
 
             {visiblePairs.length > 0 ? (
                 visiblePairs.map((pair, index) => {
-                    const vennData = [
-                        { sets: [pair.courseA], size: pair.onlyCourseA + pair.totalPaired },
-                        { sets: [pair.courseB], size: pair.onlyCourseB + pair.totalPaired },
-                        { sets: [pair.courseA, pair.courseB], size: pair.totalPaired }
+                    const barChartData = [
+                        {
+                            name: "Customers Counts",
+                            CustomerBoth: pair.totalPaired,
+                            BoughtProductA: pair.onlyCourseA,
+                            BoughtProductB: pair.onlyCourseB
+                        }
                     ];
 
                     return (
@@ -163,32 +169,25 @@ const CrossSell = () => {
                                     &#10005;
                                 </button>
                             </div>
-                            <h2 className="text-2xl font-semibold mb-4">{pair.courseA} & {pair.courseB}</h2>
+                            <h2 className="text-xl font-semibold mb-4">Cross-Sell Opportunities for {pair.courseA} & {pair.courseB}</h2>
 
-                            {/* Venn Diagram */}
-                            {/* <div className="flex justify-center">
-                            <VennDiagram sets={vennData} width={500} height={500} />
-                            </div> */}
-
-                            <p className="mb-2">
-                                <span className="font-semibold">{pair.totalPaired} users</span> have purchased both products
-                            </p>
-                            <p className="mb-2">
-                                <span className='font-semibold'>{pair.onlyCourseA} users</span> have purchased <span className="italic">{pair.courseA}</span> but not <span className="italic">{pair.courseB}</span>
-                            </p>
-                            <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
-                                <button onClick={() => handleNavigateToEmail(pair.courseA, pair.courseB, pair.onlyCourseA)} className="relative border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
-                                    {pair.suggestionA}
-                                </button>
+                            {/* Bar Chart */}
+                            <div className="flex justify-center">
+                                <CustomBarChart data={barChartData} courseA={pair.courseA} courseB={pair.courseB} />
                             </div>
+                            <h2 className="text-xl font-semibold my-2">Take Action!</h2>
+                            <div className="flex flex-col gap-4 lg:flex-row justify-around">
+                                <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
+                                    <button onClick={() => handleNavigateToEmail(pair.courseA, pair.courseB, pair.onlyCourseA)} className="relative h-full w-full bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
+                                        {pair.suggestionA} for {pair.courseB}
+                                    </button>
+                                </div>
 
-                            <p className="my-2">
-                                <span className='font-semibold'>{pair.onlyCourseB} users</span> have purchased <span className="italic">{pair.courseB}</span> but not <span className="italic">{pair.courseA}</span>
-                            </p>
-                            <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
-                                <button onClick={() => handleNavigateToEmail(pair.courseB, pair.courseA, pair.onlyCourseB)} className="relative bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
-                                    {pair.suggestionB}
-                                </button>
+                                <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
+                                    <button onClick={() => handleNavigateToEmail(pair.courseB, pair.courseA, pair.onlyCourseB)} className="relative h-full w-full bg-gold border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
+                                        {pair.suggestionB} for {pair.courseA}
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     );
@@ -238,7 +237,7 @@ const CrossSell = () => {
                             </button>
                         </div>
                         <p className="mb-6">Are you sure you want to apply all cross-sell opportunities?</p>
-                        <p className="mb-6">Note: Users appearing across multiple cross-sell opportunities will only be sent one email to limit flooding their inbox.</p>
+                        <p className="mb-6">Note: customers appearing across multiple cross-sell opportunities will only be sent one email to limit flooding their inbox.</p>
                         <div className="bg-black mx-auto rounded w-[50%]">
                             <button
                                 onClick={handleApplyAll}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import superfansData from '../../sampleData/customerData';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+
 
 const SeasonalPromotions = () => {
     const [seasonalBundles, setSeasonalBundles] = useState([]);
@@ -40,7 +42,7 @@ const SeasonalPromotions = () => {
                 return {
                     itemName: item,
                     purchaseCount: purchaseCounts[item],
-                    suggestion: `Launch a seasonal promotion for ${item} in ${currentMonth}!`,
+                    suggestion: `Launch a Seasonal Promotion for ${item} in ${currentMonth}!`,
                 };
             });
 
@@ -81,22 +83,46 @@ const SeasonalPromotions = () => {
         setShowApplyDialog(false);
     };
 
+    const prepareMonthlySalesData = (itemName, data) => {
+        const monthlySales = Array.from({ length: 12 }, (_, index) => {
+            const monthName = new Date(0, index).toLocaleString('default', { month: 'short' });
+            return {
+                month: monthName,
+                sales: 0,
+            };
+        });
+    
+        data.forEach((user) => {
+            user.history.forEach((purchase) => {
+                if (purchase.itemName === itemName) {
+                    const purchaseMonthIndex = new Date(purchase.purchaseDate).getMonth();
+                    monthlySales[purchaseMonthIndex].sales += 1;
+                }
+            });
+        });
+    
+        return monthlySales;
+    };
+    
+
+
     return (
         <div className="seasonal-promotions-container">
-            <div className="flex justify-between items-center mb-6">
-                <div className="flex items-center">
-                    <h1 className="text-3xl font-bold mr-4">Seasonal Promotions for {currentMonth}</h1>
+            <div className="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-4 lg:space-y-0 lg:space-x-4">
+                <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0">
+                    <h1 className="text-3xl font-bold mb-2 lg:mb-0 lg:mr-4 text-center lg:text-left">
+                        Seasonal Promotions for {currentMonth}
+                    </h1>
                     <div className="bg-pink text-black px-3 py-1 text-center rounded-full border-solid border-[1px] border-black">
-                        {visibleBundles.length} actions available
+                        {visibleBundles.length} Actions Available
                     </div>
                 </div>
                 {visibleBundles.length > 0 && (
-
-                    <div className="flex space-x-4">
+                    <div className="flex flex-col lg:flex-row justify-center lg:justify-start space-y-4 lg:space-y-0 lg:space-x-4">
                         <div className="bg-black text-white text-center rounded">
                             <button
                                 onClick={() => setShowApplyDialog(true)}
-                                className="relative border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                className="relative w-full border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
                             >
                                 Apply All
                             </button>
@@ -104,7 +130,7 @@ const SeasonalPromotions = () => {
                         <div className="bg-black text-white text-center rounded">
                             <button
                                 onClick={() => setShowDismissDialog(true)}
-                                className="relative border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                className="relative w-full border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
                             >
                                 Dismiss All
                             </button>
@@ -112,37 +138,55 @@ const SeasonalPromotions = () => {
                     </div>
                 )}
             </div>
+
             <p className="mb-6">We’ve identified products that were popular during {currentMonth} last year and highlighted them for a seasonal promotion.</p>
 
             {visibleBundles.length > 0 ? (
-                visibleBundles.map((bundle, index) => (
-                    <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black relative">
-                        <div className="flex justify-between items-center">
-                            <p className='text-sm font-bold'>Product</p>
-                            <button
-                                onClick={() => dismissBundle(index)}
-                                className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                            >
-                                &#10005;
-                            </button>
+                visibleBundles.map((bundle, index) => {
+                    const monthlySalesData = prepareMonthlySalesData(bundle.itemName, superfansData);
+
+                    return (
+                        <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black relative">
+                            <div className="flex justify-between items-center">
+                                <p className='text-sm font-bold'>Product</p>
+                                <button
+                                    onClick={() => dismissBundle(index)}
+                                    className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
+                                >
+                                    &#10005;
+                                </button>
+                            </div>
+                            <h2 className="text-2xl font-semibold mb-4">Promotion Opportunity for {bundle.itemName}</h2>
+
+                            {/* Bar Chart */}
+                            <ResponsiveContainer width="100%" height={300}>
+                                <BarChart data={monthlySalesData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="month" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Bar dataKey="sales" fill="#FE91E8" />
+                                </BarChart>
+                            </ResponsiveContainer>
+
+                            <p className="mb-2">
+                                <span className="font-semibold">{bundle.purchaseCount} customers</span> purchased this product in {currentMonth}. It might be worth running a promotion for this product at this time or other hot times of the year!
+                            </p>
+                            <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
+                                <button
+                                    onClick={() => handleNavigateToDiscount(bundle.itemName)}
+                                    className="relative border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    {bundle.suggestion}
+                                </button>
+                            </div>
                         </div>
-                        <h2 className="text-2xl font-semibold mb-4">{bundle.itemName}</h2>
-                        <p className="mb-2">
-                            <span className="font-semibold">{bundle.purchaseCount} users</span> purchased this product in {currentMonth} last year.
-                        </p>
-                        <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
-                            <button
-                                onClick={() => handleNavigateToDiscount(bundle.itemName)}
-                                className="relative border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
-                            >
-                                {bundle.suggestion}
-                            </button>
-                        </div>
-                    </div>
-                ))
+                    );
+                })
             ) : (
                 <p>No seasonal promotions found for {currentMonth}.</p>
             )}
+
 
             {/* Dismiss All Confirmation Dialog */}
             {showDismissDialog && (

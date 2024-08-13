@@ -9,7 +9,7 @@ const About = () => {
                 return (
                     <div className='bg-white border-black border-dashed border-2 rounded p-4'>
                         <h2 className='text-4xl my-2'>Gumroad Dashboard Actions Tab Demo</h2>
-                        
+
                         <p className='mb-2'>This project is a demo for the Gumroad Design Engineer position, showcasing a proposed "Actions" tab on the Gumroad dashboard. The goal of this feature is to help users quickly gain insights from their data and take actions that can lead to increased sales. </p>
 
                         <p> By highlighting opportunities based on user data, this feature enables sellers to make better use of existing capabilities such as checkout discounts, workflow automation, and email campaigns with just one click. Ultimately, it will lead to more sales for sellers and revenue for Gumroad.</p>
@@ -27,9 +27,15 @@ const About = () => {
                                 <strong>Future Features:</strong> As users engage with the feature and provide feedback, Gumroad can expand the use cases of the "Actions" tab. This could include analyzing different and newly collected types of data, identifying more scenarios for user actions, and enabling A/B testing based on past performance. Additional support from a data scientist could be leveraged to build out the recommendation feature set.
                             </li>
                             <li className='mt-2'>
-                                <strong>Technologies Used in this Demo:</strong> React, Tailwind CSS
+                                <strong>Technologies Used in this Demo:</strong> React, Tailwind CSS, and deployed on Vercel.
                             </li>
                         </ol>
+
+                        <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
+                            <a href="https://github.com/pcybriwsky/gumroad_actions" className="relative bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded text-center transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
+                                Link to the Github Repo
+                            </a>
+                        </div>
                     </div>
                 );
 
@@ -42,13 +48,19 @@ const About = () => {
                         <p className='mb-4'>Over the past few months, I've begun to work with companies on small projects as well to build experiences natively into their platforms. n-gen and associated projects have been built on React, Node.js, and Tailwind. I've served as both designer and engineer.</p>
 
                         <p className='mb-4'>I'm passionate about the opportunity to work as a Design Engineer at Gumroad. It's a chance to leverage my design and technical chops to create a better experience for solo creators and entrepreneurs, something I've experienced first-hand to be extremely difficult.</p>
-                        <p className='mb-4'>If you have any questions or would like to follow up and chat, feel free to reach out to me <a href="mailto:pete@ngenart.com?subject=Hey%20Pete!%20Let's%20Chat" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">at my email</a>.</p>
 
-                        <p className='mb-4'>Thanks for checking out the demo! In the spirit of making great decisions in one click, if you think I should be hired, there's a button for that too.</p>
+                        <p className='mb-4'>Thanks for checking out the demo! If you'd like to chat or have any questions, click the button below to send me an email!</p>
+                        <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
+                            <a href="mailto:pete@ngenart.com?subject=Hey%20Pete!%20Let's%20Chat" className="relative bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded text-center transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
+                                Chat with Pete!
+                            </a>
+                        </div>
+
+                        <p className='mb-4'>In the spirit of making great decisions in one click, if you think I should be hired, there is a button for that too.</p>
 
                         <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
-                            <a href="mailto:pete@ngenart.com?subject=The%20Button%20Worked,%20You're%20Hired" className="relative bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded text-center transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
-                                Hire Pete Right Now
+                            <a href="mailto:pete@ngenart.com?subject=The%20Button%20Worked,%20You're%20Hired" className="relative bg-gold border-solid border-black border-[1px] text-black px-4 py-2 rounded text-center transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
+                                Hire Pete Right Now!
                             </a>
                         </div>
                     </div>
