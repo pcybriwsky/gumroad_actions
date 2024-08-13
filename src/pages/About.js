@@ -30,10 +30,10 @@ const About = () => {
                                 <strong>Site Structure:</strong> This demo recreates the Gumroad site to showcase the "Actions" tab and a few supporting click-through pages. All other pages are either dead links or redirect to this About page.
                             </li>
                             <li className='mt-2'>
-                                <strong>Data Source:</strong> The data used in the demo was randomly generated and is structured in the same format as the Gumroad Sales Export CSV. That said, a feature like this can be launched with Gumroad's existing data collection.
+                                <strong>Data Source:</strong> The data used in the demo was randomly generated and is structured in the same format as the Gumroad Sales Export CSV. That said, a feature like this can be launched with Gumroad's existing data collection. The data is refreshed / restored to original values on each page load.
                             </li>
                             <li className='mt-2'>
-                                <strong>Future Features:</strong> As users engage with the feature and provide feedback, Gumroad can expand the use cases of the "Actions" tab. This could include analyzing different and newly collected types of data, identifying more scenarios for user actions, and enabling A/B testing based on past performance. Additional support from a data scientist could be leveraged to build out more robust recommendations and projections in the future as well.
+                                <strong>Feature Rollout:</strong> As users engage with the feature and provide feedback, Gumroad can expand the use cases of the "Actions" tab. This could include analyzing different and newly collected types of data, identifying more scenarios for user actions, and enabling A/B testing based on past performance and perhaps community data. Additional support from a data scientist could be leveraged to build out more robust recommendations engine in the future as well.
                             </li>
                             <li className='mt-2'>
                                 <strong>Technologies Used in this Demo:</strong> React, Tailwind CSS, and deployed on Vercel.
