@@ -12,7 +12,7 @@ const About = () => {
                         
                         <p className='mb-2'>This project is a demo for the Gumroad Design Engineer position, showcasing a proposed "Actions" tab on the Gumroad dashboard. The goal of this feature is to help users quickly gain insights from their data and take actions that can lead to increased sales. </p>
 
-                        <p> By highlighting opportunities based on user data, this feature enables sellers to make better use of existing capabilities such as checkout discounts, workflow automation, and email campaigns with just one click. Ultimately, it will lead to more sales for sellers and revenue for Gumroad</p>
+                        <p> By highlighting opportunities based on user data, this feature enables sellers to make better use of existing capabilities such as checkout discounts, workflow automation, and email campaigns with just one click. Ultimately, it will lead to more sales for sellers and revenue for Gumroad.</p>
                         <ol>
                             <li className='mt-2'>
                                 <strong>Purpose:</strong> This demo addresses the challenge users face in understanding and acting upon their analytics. The "Actions" tab is designed to provide quick insights and actionable steps to help users optimize their sales strategies on Gumroad.
@@ -38,11 +38,11 @@ const About = () => {
                     <div className='bg-white border-black border-dashed border-2 rounded p-4'>
                         <h2 className='text-4xl my-2'>About Me</h2>
                         <p className='mb-4'>I'm Pete, a designer and software engineer out of New York.</p>
-                        <p className='mb-4'>I spent some time doing product marketing and design consulting before starting <a href="https://ngenart.com" target="_blank" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">n-gen</a>, a solo design studio turning data into 1:1 art and visualizations. The application connects to APIs from Strava and Spotify and allow's users to sign-in and create art directly from their data. To-date, the application has had over 9M users.</p>
+                        <p className='mb-4'>I spent some time doing product marketing and design consulting before starting <a href="https://ngenart.com" target="_blank" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">n-gen</a>, a solo design studio turning data into 1:1 art and visualizations. The application connects to APIs from Strava and Spotify and allows users to sign-in and create art directly from their data. To-date, the application has had over 9M users.</p>
                         <p className='mb-4'>Over the past few months, I've begun to work with companies on small projects as well to build experiences natively into their platforms. n-gen and associated projects have been built on React, Node.js, and Tailwind. I've served as both designer and engineer.</p>
 
                         <p className='mb-4'>I'm passionate about the opportunity to work as a Design Engineer at Gumroad. It's a chance to leverage my design and technical chops to create a better experience for solo creators and entrepreneurs, something I've experienced first-hand to be extremely difficult.</p>
-                        <p className='mb-4'>If you have any questions or would like to follow-up and chat, feel free to reach out to me <a href="mailto:pete@ngenart.com?subject=Hey%20Pete!%20Let's%20Chat" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">on my email</a>.</p>
+                        <p className='mb-4'>If you have any questions or would like to follow up and chat, feel free to reach out to me <a href="mailto:pete@ngenart.com?subject=Hey%20Pete!%20Let's%20Chat" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">at my email</a>.</p>
 
                         <p className='mb-4'>Thanks for checking out the demo! In the spirit of making great decisions in one click, if you think I should be hired, there's a button for that too.</p>
 
