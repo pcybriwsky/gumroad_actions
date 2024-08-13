@@ -10,6 +10,11 @@ import { ReactComponent as CurrencyDollarIcon } from 'bootstrap-icons/icons/coin
 import { ReactComponent as BarChartFillIcon } from 'bootstrap-icons/icons/bar-chart-fill.svg';
 import { ReactComponent as Check2SquareIcon } from 'bootstrap-icons/icons/check2-square.svg';
 import { ReactComponent as MenuIcon } from 'bootstrap-icons/icons/list.svg';
+import { ReactComponent as SearchIcon } from 'bootstrap-icons/icons/search.svg';
+import { ReactComponent as CollectionIcon } from 'bootstrap-icons/icons/collection.svg';
+import { ReactComponent as BookHalfIcon } from 'bootstrap-icons/icons/book-half.svg';
+import { ReactComponent as GearFull } from 'bootstrap-icons/icons/gear-fill.svg';
+
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,7 +116,7 @@ const Sidebar = () => {
       )}
 
       {/* Sidebar for larger screens */}
-      <div className="hidden sm:flex w-64 bg-black text-white flex-col">
+      <div className="hidden sm:flex w-64 bg-black text-white flex-col h-screen fixed overflow-y-auto">
         <div className="p-4">
           <Link to="/" className="flex items-center py-[40px] space-x-2">
             <img src="/Assets/Images/gumroadWhite.png" alt="Gumroad Logo" className="w-[80%] mx-auto" />
@@ -188,21 +193,25 @@ const Sidebar = () => {
             </li>
             <li className='py-[20px]'>
               <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
+                <SearchIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Discover</span>
               </Link>
             </li>
             <li className='py-[20px]'>
               <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
+                <CollectionIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Library</span>
               </Link>
             </li>
             <li className='py-[20px]'>
               <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
+                <BookHalfIcon className="w-6 h-6 fill-current" />
                 <span className="ml-2">Help</span>
               </Link>
             </li>
             <li className='py-[20px]'>
               <Link to="/about" className="flex items-center p-2 text-white hover:text-pink">
+                <GearFull className="w-6 h-6 fill-current" />
                 <span className="ml-2">Settings</span>
               </Link>
             </li>
