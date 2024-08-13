@@ -162,12 +162,14 @@ const CrossSell = () => {
                         <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black">
                             <div className="flex justify-between items-center mb-4">
                                 <h2 className="text-2xl font-semibold">{pair.courseA} <span className='italic'>and</span> {pair.courseB}</h2>
-                                <button
-                                    onClick={() => dismissSuggestion(index)}
-                                    className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                                >
-                                    &#10005;
-                                </button>
+                                <div className='bg-black rounded'>
+                                    <button
+                                        onClick={() => dismissSuggestion(index)}
+                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                    >
+                                        &#10005;
+                                    </button>
+                                </div>
                             </div>
 
                             {/* Bar Chart */}
@@ -183,7 +185,7 @@ const CrossSell = () => {
 
                                 <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
                                     <button onClick={() => handleNavigateToEmail(pair.courseB, pair.courseA, pair.onlyCourseB)} className="relative h-full w-full bg-gold border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
-                                        {pair.suggestionB}
+                                        {pair.suggestionB} for {pair.courseA}
                                     </button>
                                 </div>
                             </div>
@@ -199,14 +201,16 @@ const CrossSell = () => {
             {showDismissDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-8 rounded border-solid border-black border-2">
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-2xl font-bold mb-4">Dismiss All</h2>
-                            <button
-                                onClick={closeDialog}
-                                className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                            >
-                                &#10005;
-                            </button>
+                        <div className="flex justify-between items-center mb-4">
+                            <h2 className="text-2xl font-bold">Dismiss All</h2>
+                            <div className='bg-black rounded'>
+                                    <button
+                                        onClick={closeDialog}
+                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                    >
+                                        &#10005;
+                                    </button>
+                                </div>
                         </div>
                         <p className="mb-6">Are you sure you want to dismiss all cross-sell opportunities?</p>
                         <div className="bg-black mx-auto w-[50%]">
@@ -225,14 +229,16 @@ const CrossSell = () => {
             {showApplyDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-8 rounded border-solid border-black border-2">
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-2xl font-bold rounded mb-4">Apply All</h2>
-                            <button
-                                onClick={closeDialog}
-                                className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                            >
-                                &#10005;
-                            </button>
+                        <div className="flex justify-between items-center mb-4">
+                            <h2 className="text-2xl font-bold rounded">Apply All</h2>
+                            <div className='bg-black rounded'>
+                                    <button
+                                        onClick={closeDialog}
+                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                    >
+                                        &#10005;
+                                    </button>
+                                </div>
                         </div>
                         <p className="mb-6">Are you sure you want to apply all cross-sell opportunities?</p>
                         <p className="mb-6">Note: customers appearing across multiple cross-sell opportunities will only be sent one email to limit flooding their inbox.</p>

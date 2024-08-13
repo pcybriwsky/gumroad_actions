@@ -149,12 +149,14 @@ const SeasonalPromotions = () => {
                         <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black relative">
                             <div className="flex justify-between items-center mb-4">
                                 <h2 className="text-2xl font-semibold">Promotion Opportunity for {bundle.itemName}</h2>
-                                <button
-                                    onClick={() => dismissBundle(index)}
-                                    className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                                >
-                                    &#10005;
-                                </button>
+                                <div className='bg-black rounded'>
+                                    <button
+                                        onClick={() => dismissBundle(index)}
+                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                    >
+                                        &#10005;
+                                    </button>
+                                </div>
                             </div>
 
                             {/* Bar Chart */}
@@ -193,12 +195,14 @@ const SeasonalPromotions = () => {
                     <div className="bg-white p-8 rounded border-solid border-black border-2">
                         <div className="flex justify-between items-center">
                             <h2 className="text-2xl font-bold mb-4">Dismiss All</h2>
-                            <button
-                                onClick={closeDialog}
-                                className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                            >
-                                &#10005;
-                            </button>
+                            <div className='bg-black rounded'>
+                                    <button
+                                        onClick={closeDialog}
+                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                    >
+                                        &#10005;
+                                    </button>
+                                </div>
                         </div>
                         <p className="mb-6">Are you sure you want to dismiss all seasonal promotion suggestions?</p>
                         <div className="bg-black mx-auto rounded w-[50%]">
@@ -219,12 +223,14 @@ const SeasonalPromotions = () => {
                     <div className="bg-white p-8 rounded border-solid border-black border-2">
                         <div className="flex justify-between items-center">
                             <h2 className="text-2xl font-bold mb-4">Apply All</h2>
-                            <button
-                                onClick={closeDialog}
-                                className="text-gray hover:text-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200"
-                            >
-                                &#10005;
-                            </button>
+                            <div className='bg-black rounded'>
+                                    <button
+                                        onClick={closeDialog}
+                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                    >
+                                        &#10005;
+                                    </button>
+                                </div>
                         </div>
                         <p className="mb-6">Are you sure you want to apply all seasonal promotion suggestions?</p>
                         <div className="bg-black rounded mx-auto w-[50%]">
