@@ -177,13 +177,13 @@ const CrossSell = () => {
                             <div className="flex flex-col gap-4 lg:flex-row justify-around">
                                 <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
                                     <button onClick={() => handleNavigateToEmail(pair.courseA, pair.courseB, pair.onlyCourseA)} className="relative h-full w-full bg-pink border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
-                                        {pair.suggestionA} for {pair.courseB}
+                                        {pair.suggestionA}
                                     </button>
                                 </div>
 
                                 <div className="suggested-action-section bg-black rounded flex flex-col space-y-4 my-4 w-[50%] mx-auto">
                                     <button onClick={() => handleNavigateToEmail(pair.courseB, pair.courseA, pair.onlyCourseB)} className="relative h-full w-full bg-gold border-solid border-black border-[1px] text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1">
-                                        {pair.suggestionB} for {pair.courseA}
+                                        {pair.suggestionB}
                                     </button>
                                 </div>
                             </div>
