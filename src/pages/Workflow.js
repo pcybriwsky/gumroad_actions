@@ -16,7 +16,7 @@ const Workflow = () => {
         <div className="workflow-container p-6">
             <h1 className="text-3xl font-bold mb-6">Create Workflow</h1>
 
-            <div className="bg-white p-4 rounded border-dashed border-2 border-black">
+            <div className="bg-white p-4 rounded border-solid border-2 border-black">
                 <div className="mb-4">
                     <label className="block font-semibold mb-2" htmlFor="workflow-name">
                         Workflow Name

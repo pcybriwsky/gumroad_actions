@@ -118,7 +118,7 @@ const CrossSell = () => {
             <div className="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-4 lg:space-y-0 lg:space-x-4">
                 <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0">
                     <h1 className="text-3xl font-bold mb-2 lg:mb-0 lg:mr-4 text-center lg:text-left">Cross-Sell Opportunities</h1>
-                    <div className="bg-pink text-black px-3 py-1 text-center rounded-full border-solid border-[1px] border-black">
+                    <div className="bg-pink text-black px-3 py-2 text-center rounded-full border-solid border-[1px] border-black">
                         {visiblePairs.length} Actions Available
                     </div>
                 </div>
@@ -159,13 +159,13 @@ const CrossSell = () => {
                     ];
 
                     return (
-                        <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black">
+                        <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-solid border-2 border-black">
                             <div className="flex justify-between items-center mb-4">
                                 <h2 className="text-2xl font-semibold">{pair.courseA} <span className='italic'>and</span> {pair.courseB}</h2>
                                 <div className='bg-black rounded'>
                                     <button
                                         onClick={() => dismissSuggestion(index)}
-                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                        className="text-gray bg-white w-6 y-6"
                                     >
                                         &#10005;
                                     </button>
@@ -200,26 +200,38 @@ const CrossSell = () => {
             {/* Dismiss All Confirmation Dialog */}
             {showDismissDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-8 rounded border-solid border-black border-2">
-                        <div className="flex justify-between items-center mb-4">
-                            <h2 className="text-2xl font-bold">Dismiss All</h2>
-                            <div className='bg-black rounded'>
+                    <div className="bg-black rounded border-solid border-black">
+                        <div className="bg-white p-8 rounded border-solid border-black border-2 transform transition-transform -translate-y-2 -translate-x-2">
+                            <div className="flex justify-between items-center mb-4">
+                                <h2 className="text-2xl font-bold">Dismiss All</h2>
+                                <div className='bg-black rounded'>
                                     <button
                                         onClick={closeDialog}
-                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                                                               className="text-gray bg-white w-6 y-6"
                                     >
                                         &#10005;
                                     </button>
                                 </div>
-                        </div>
-                        <p className="mb-6">Are you sure you want to dismiss all cross-sell opportunities?</p>
-                        <div className="bg-black mx-auto w-[50%]">
-                            <button
-                                onClick={handleDismissAll}
-                                className="relative w-full border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
-                            >
-                                Confirm
-                            </button>
+                            </div>
+                            <p className="mb-6">Are you sure you want to dismiss all cross-sell opportunities?</p>
+                            <div className="bg-black rounded mx-auto w-[50%]">
+                                <button
+                                    onClick={handleDismissAll}
+                                    className="relative w-full border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    Yes, dismiss all
+                                </button>
+                            </div>
+
+                            <div className="bg-black rounded mx-auto w-[50%] my-2">
+                                <button
+                                    onClick={closeDialog}
+                                    className="relative w-full border-solid border-black border-[1px] bg-white text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    No, cancel
+                                </button>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -228,27 +240,38 @@ const CrossSell = () => {
             {/* Apply All Confirmation Dialog */}
             {showApplyDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-8 rounded border-solid border-black border-2">
-                        <div className="flex justify-between items-center mb-4">
-                            <h2 className="text-2xl font-bold rounded">Apply All</h2>
-                            <div className='bg-black rounded'>
+                    <div className="bg-black rounded border-solid border-black">
+                        <div className="bg-white p-8 rounded border-solid border-black border-2 transform transition-transform -translate-y-2 -translate-x-2">
+                            <div className="flex bg-white justify-between items-center mb-4">
+                                <h2 className="text-2xl font-bold rounded">Apply All</h2>
+                                <div className='bg-black rounded'>
                                     <button
                                         onClick={closeDialog}
-                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                                                               className="text-gray bg-white w-6 y-6"
                                     >
                                         &#10005;
                                     </button>
                                 </div>
-                        </div>
-                        <p className="mb-6">Are you sure you want to apply all cross-sell opportunities?</p>
-                        <p className="mb-6">Note: customers appearing across multiple cross-sell opportunities will only be sent one email to limit flooding their inbox.</p>
-                        <div className="bg-black mx-auto rounded w-[50%]">
-                            <button
-                                onClick={handleApplyAll}
-                                className="relative w-full border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
-                            >
-                                Apply Cross-Sell Opportunities
-                            </button>
+                            </div>
+                            <p className="mb-6">Are you sure you want to apply all cross-sell opportunities?</p>
+                            <p className="mb-6">Note: customers appearing across multiple cross-sell opportunities will only be sent one email to limit flooding their inbox.</p>
+                            <div className="bg-black mx-auto rounded w-[50%]">
+                                <button
+                                    onClick={handleApplyAll}
+                                    className="relative w-full border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    Yes, apply all
+                                </button>
+                            </div>
+                            <div className="bg-black rounded mx-auto w-[50%] my-2">
+                                <button
+                                    onClick={closeDialog}
+                                    className="relative w-full border-solid border-black border-[1px] bg-white text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    No, cancel
+                                </button>
+
+                            </div>
                         </div>
                     </div>
                 </div>

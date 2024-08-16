@@ -91,7 +91,7 @@ const SeasonalPromotions = () => {
                 sales: 0,
             };
         });
-    
+
         data.forEach((user) => {
             user.history.forEach((purchase) => {
                 if (purchase.itemName === itemName) {
@@ -100,10 +100,10 @@ const SeasonalPromotions = () => {
                 }
             });
         });
-    
+
         return monthlySales;
     };
-    
+
 
 
     return (
@@ -113,7 +113,7 @@ const SeasonalPromotions = () => {
                     <h1 className="text-3xl font-bold mb-2 lg:mb-0 lg:mr-4 text-center lg:text-left">
                         Seasonal Promotions for {currentMonth}
                     </h1>
-                    <div className="bg-pink text-black px-3 py-1 text-center rounded-full border-solid border-[1px] border-black">
+                    <div className="bg-pink text-black px-3 py-2 text-center rounded-full border-solid border-[1px] border-black">
                         {visibleBundles.length} Actions Available
                     </div>
                 </div>
@@ -146,13 +146,13 @@ const SeasonalPromotions = () => {
                     const monthlySalesData = prepareMonthlySalesData(bundle.itemName, superfansData);
 
                     return (
-                        <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black relative">
+                        <div key={index} className="insight-section mb-8 bg-white p-[10px] rounded border-solid border-2 border-black relative">
                             <div className="flex justify-between items-center mb-4">
                                 <h2 className="text-2xl font-semibold">Promotion Opportunity for {bundle.itemName}</h2>
                                 <div className='bg-black rounded'>
                                     <button
                                         onClick={() => dismissBundle(index)}
-                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                                                               className="text-gray bg-white w-6 y-6"
                                     >
                                         &#10005;
                                     </button>
@@ -166,7 +166,7 @@ const SeasonalPromotions = () => {
                                     <XAxis dataKey="month" />
                                     <YAxis />
                                     <Tooltip />
-                                    <Bar dataKey="sales" fill="#FE91E8" />
+                                    <Bar dataKey="sales" fill="#ff90e8" stroke="#000000" />
                                 </BarChart>
                             </ResponsiveContainer>
 
@@ -192,26 +192,28 @@ const SeasonalPromotions = () => {
             {/* Dismiss All Confirmation Dialog */}
             {showDismissDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-8 rounded border-solid border-black border-2">
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-2xl font-bold mb-4">Dismiss All</h2>
-                            <div className='bg-black rounded'>
+                    <div className="bg-black rounded border-solid border-black">
+                        <div className="bg-white p-8 rounded border-solid border-black border-2 transform transition-transform -translate-y-2 -translate-x-2">
+                            <div className="flex justify-between items-center">
+                                <h2 className="text-2xl font-bold mb-4">Dismiss All</h2>
+                                <div className='bg-black rounded'>
                                     <button
                                         onClick={closeDialog}
-                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                                                               className="text-gray bg-white w-6 y-6"
                                     >
                                         &#10005;
                                     </button>
                                 </div>
-                        </div>
-                        <p className="mb-6">Are you sure you want to dismiss all seasonal promotion suggestions?</p>
-                        <div className="bg-black mx-auto rounded w-[50%]">
-                            <button
-                                onClick={handleDismissAll}
-                                className="relative w-full border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
-                            >
-                                Confirm
-                            </button>
+                            </div>
+                            <p className="mb-6">Are you sure you want to dismiss all seasonal promotion suggestions?</p>
+                            <div className="bg-black mx-auto rounded w-[50%]">
+                                <button
+                                    onClick={handleDismissAll}
+                                    className="relative w-full border-solid border-black border-[1px] bg-red text-white px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    Confirm
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -220,26 +222,28 @@ const SeasonalPromotions = () => {
             {/* Apply All Confirmation Dialog */}
             {showApplyDialog && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-8 rounded border-solid border-black border-2">
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-2xl font-bold mb-4">Apply All</h2>
-                            <div className='bg-black rounded'>
+                    <div className="bg-black rounded border-solid border-black">
+                        <div className="bg-white p-8 rounded border-solid border-black border-2 transform transition-transform -translate-y-2 -translate-x-2">
+                            <div className="flex justify-between items-center">
+                                <h2 className="text-2xl font-bold mb-4">Apply All</h2>
+                                <div className='bg-black rounded'>
                                     <button
                                         onClick={closeDialog}
-                                        className="text-gray hover:text-white bg-white hover:bg-red border border-black rounded w-6 y-6 transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                                                               className="text-gray bg-white w-6 y-6"
                                     >
                                         &#10005;
                                     </button>
                                 </div>
-                        </div>
-                        <p className="mb-6">Are you sure you want to apply all seasonal promotion suggestions?</p>
-                        <div className="bg-black rounded mx-auto w-[50%]">
-                            <button
-                                onClick={handleApplyAll}
-                                className="relative w-full border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
-                            >
-                                Apply Seasonal Promotions
-                            </button>
+                            </div>
+                            <p className="mb-6">Are you sure you want to apply all seasonal promotion suggestions?</p>
+                            <div className="bg-black rounded mx-auto w-[50%]">
+                                <button
+                                    onClick={handleApplyAll}
+                                    className="relative w-full border-solid border-black border-[1px] bg-pink text-black px-4 py-2 rounded transform transition-transform duration-200 hover:-translate-y-1 hover:-translate-x-1"
+                                >
+                                    Apply Seasonal Promotions
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

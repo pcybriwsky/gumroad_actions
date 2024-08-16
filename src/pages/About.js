@@ -7,7 +7,7 @@ const About = () => {
         switch (activeTab) {
             case 'DemoDetails':
                 return (
-                    <div className='bg-white border-black border-dashed border-2 rounded p-4'>
+                    <div className='bg-white border-black border-solid border-2 rounded p-4'>
                         <h2 className='text-4xl my-2'>Gumroad Dashboard Actions Tab Demo</h2>
 
                         <p className='mb-2'>This project is a demo for the Gumroad Design Engineer position, showcasing a proposed "Actions" tab on the Gumroad dashboard. The goal of this feature is to help users quickly gain insights from their data and take actions that can lead to increased sales. </p>
@@ -50,7 +50,7 @@ const About = () => {
 
             case 'AboutMe':
                 return (
-                    <div className='bg-white border-black border-dashed border-2 rounded p-4'>
+                    <div className='bg-white border-black border-solid border-2 rounded p-4'>
                         <h2 className='text-4xl my-2'>About Me</h2>
                         <p className='mb-4'>I'm Pete, a designer and software engineer out of New York.</p>
                         <p className='mb-4'>I spent some time doing product marketing and design consulting before starting <a href="https://ngenart.com" target="_blank" className="text-pink underline hover:opacity-80 transition-opacity ease-linear">n-gen</a>, a solo design studio turning data into 1:1 art and visualizations. The application connects to APIs from Strava and Spotify and allows users to sign-in and create art directly from their data. To-date, the application has had over 9M users.</p>

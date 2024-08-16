@@ -6,6 +6,7 @@ import Email from './pages/Email';
 import Discount from './pages/Discount';
 import Workflow from './pages/Workflow';
 import About from './pages/About';
+import './index.css';
 
 function App() {
   return (

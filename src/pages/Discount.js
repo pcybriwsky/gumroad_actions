@@ -36,7 +36,7 @@ const Discount = () => {
     };
 
     return (
-        <div className="discount-container p-8 bg-white rounded border-dashed border-2 border-black">
+        <div className="discount-container p-8 bg-white rounded border-solid border-2 border-black">
             <h1 className="text-3xl font-bold mb-6">Create Discount</h1>
             <div className="mb-4">
                 <label className="block text-lg font-medium mb-2">Promotion Name</label>

@@ -11,13 +11,13 @@ const CustomBarChart = ({ data, courseA, courseB }) => {
                 <Tooltip />
                 <Legend />
                 
-                <Bar name={`Purchased only ${courseA}`} dataKey="BoughtProductA" fill="#FE91E8" >
+                <Bar name={`Purchased only ${courseA}`} dataKey="BoughtProductA" fill="#ff90e8" stroke="#000000" >
                     <LabelList dataKey="BoughtProductA" position="top" />
                 </Bar>
-                <Bar name={`Purchased both products`} dataKey="CustomerBoth" fill="#000000" >
+                <Bar name={`Purchased both products`} dataKey="CustomerBoth" fill="#000000" stroke="#000000">
                     <LabelList dataKey="CustomerBoth" position="top" />
                 </Bar>
-                <Bar name={`Purchased only ${courseB}`} dataKey="BoughtProductB" fill="#FF9F1C"  >
+                <Bar name={`Purchased only ${courseB}`} dataKey="BoughtProductB" fill="#ffc900" stroke="#000000">
                     <LabelList dataKey="BoughtProductB" position="top" />
                 </Bar>
             </BarChart>

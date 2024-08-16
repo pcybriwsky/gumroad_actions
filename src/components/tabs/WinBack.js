@@ -131,7 +131,7 @@ const WinBack = () => {
             <p className="mb-6">We’ve taken a look at your customers' activity trends in the past year. Offer inactive customers a time-sensitive discount or inform them about new courses.</p>
 
             {inactiveCustomers.length > 0 ? (
-                <div className="insight-section mb-8 bg-white p-[10px] rounded border-dashed border-2 border-black">
+                <div className="insight-section mb-8 bg-white p-[10px] rounded border-solid border-2 border-black">
                     {purchaseData.length > 0 && (
                         <div className="mb-8">
                             <h2 className="text-2xl font-semibold mb-4">Customer Retention Over the Last Year</h2>
@@ -143,7 +143,7 @@ const WinBack = () => {
                                         <YAxis domain={[0, totalCustomers]} /> {/* Set the domain to include the total number of customers */}
                                         <Tooltip />
                                         <Legend />
-                                        <Line type="monotone" dataKey="customers" name='Customers Retained Since' stroke="#FE91E8" activeDot={{ r: 8 }} />
+                                        <Line type="monotone" dataKey="customers" name='Customers Retained Since' stroke="#ff90e8" activeDot={{ r: 8 }} />
                                     </LineChart>
                                 </ResponsiveContainer>
                             </div>

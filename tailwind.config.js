@@ -3,16 +3,24 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        sm: '640px',  // Set the custom breakpoint for 'sm'
+      },
+    },
     colors: {
       black: '#000000',
       white: '#ffffff',
-      pink: '#FE91E8',
+      pink: '#ff90e8',
       grey: '#F4F4F0',
       red: '#D52941',
-      gold: '#FF9F1C',
-      blue: '#119DA4'
-    }
+      gold: '#ffc900',
+      blue: '#23a094'
+    },
+    fontFamily: {
+      sans: ['Mabry Pro', 'sans-serif'], // Ensure this matches the font-family defined in your CSS
+    },
+
   },
   plugins: [],
 }

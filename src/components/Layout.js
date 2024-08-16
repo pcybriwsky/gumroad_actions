@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react"
 const Layout = ({ children }) => {
   return (
     
-    <div className="sm:flex">
+    <div className="sm:flex font-sans">
       <Sidebar />
       <div className="flex-1 p-4 bg-gray-100 sm:pl-72">
         {children}
